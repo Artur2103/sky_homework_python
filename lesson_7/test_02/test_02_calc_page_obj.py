@@ -20,4 +20,6 @@ def test_calc(driver):
     calc_page.click_plus()
     calc_page.click_8()
     calc_page.click_equals()
-    calc_page.check_result()
+    result = calc_page.check_result()
+
+    assert result == "15"

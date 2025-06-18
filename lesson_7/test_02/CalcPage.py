@@ -57,4 +57,4 @@ class CalcPage:
 
         )
         result_text = self.driver.find_element(By.CSS_SELECTOR, ".screen").text
-        assert result_text == "15"
+        return result_text

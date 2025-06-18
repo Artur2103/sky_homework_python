@@ -13,4 +13,4 @@ class CheckoutTwoPage:
         # Проверка итоговой суммы
         total = self.driver.find_element(
             By.CSS_SELECTOR, ".summary_total_label").text
-        assert total == "Total: $58.29"
+        return total

@@ -35,4 +35,6 @@ def test_shop(driver):
     checkout_one_page.last_name()
     checkout_one_page.postal_code()
     checkout_one_page.continue_click()
-    checkout_two_page.check_total_price()
+    total = checkout_two_page.check_total_price()
+
+    assert total == "Total: $58.29"
