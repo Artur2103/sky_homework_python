@@ -15,11 +15,10 @@ def driver():
 def test_calc(driver):
     calc_page = CalcPage(driver)
     calc_page.open()
-    calc_page.delay_input()
-    calc_page.click_7()
-    calc_page.click_plus()
-    calc_page.click_8()
-    calc_page.click_equals()
+    calc_page.delay_input(45)
+    calc_page.click_button("7")
+    calc_page.click_button("+")
+    calc_page.click_button("8")
+    calc_page.click_button("=")
     result = calc_page.check_result()
-
     assert result == "15"
